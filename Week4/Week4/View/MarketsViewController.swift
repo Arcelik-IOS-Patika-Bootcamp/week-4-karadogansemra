@@ -10,7 +10,6 @@ import UIKit
 class MarketsViewController: UIViewController {
 
     @IBOutlet weak var marketsTableView: UITableView!
-    
     @IBOutlet weak var marketsSearchBar: UISearchBar!
     
     

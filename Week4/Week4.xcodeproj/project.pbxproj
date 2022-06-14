@@ -11,6 +11,8 @@
 		F70B1D7C2858695200B32918 /* MarketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70B1D7B2858695200B32918 /* MarketsViewController.swift */; };
 		F70B1D7E2858696900B32918 /* BuyAndSellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70B1D7D2858696900B32918 /* BuyAndSellViewController.swift */; };
 		F70B1D802858697F00B32918 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70B1D7F2858697F00B32918 /* WalletViewController.swift */; };
+		F70B1D8628586AB700B32918 /* MarketsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70B1D8428586AB700B32918 /* MarketsTableViewCell.swift */; };
+		F70B1D8728586AB700B32918 /* MarketsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F70B1D8528586AB700B32918 /* MarketsTableViewCell.xib */; };
 		F7632BF92858666B007DAEA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7632BF82858666B007DAEA2 /* AppDelegate.swift */; };
 		F7632BFB2858666B007DAEA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7632BFA2858666B007DAEA2 /* SceneDelegate.swift */; };
 		F7632C002858666B007DAEA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7632BFE2858666B007DAEA2 /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 		F70B1D7B2858695200B32918 /* MarketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsViewController.swift; sourceTree = "<group>"; };
 		F70B1D7D2858696900B32918 /* BuyAndSellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyAndSellViewController.swift; sourceTree = "<group>"; };
 		F70B1D7F2858697F00B32918 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
+		F70B1D8428586AB700B32918 /* MarketsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsTableViewCell.swift; sourceTree = "<group>"; };
+		F70B1D8528586AB700B32918 /* MarketsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketsTableViewCell.xib; sourceTree = "<group>"; };
 		F7632BF52858666B007DAEA2 /* Week4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Week4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7632BF82858666B007DAEA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7632BFA2858666B007DAEA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,7 @@
 		F70B1D782858692200B32918 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F70B1D8128586A5800B32918 /* Cell */,
 				F7632C032858666E007DAEA2 /* LaunchScreen.storyboard */,
 				F7632BFE2858666B007DAEA2 /* Main.storyboard */,
 				F70B1D792858693D00B32918 /* HomeViewController.swift */,
@@ -93,6 +98,15 @@
 				F70B1D7F2858697F00B32918 /* WalletViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F70B1D8128586A5800B32918 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F70B1D8428586AB700B32918 /* MarketsTableViewCell.swift */,
+				F70B1D8528586AB700B32918 /* MarketsTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		F7632BEC2858666B007DAEA2 = {
@@ -251,6 +265,7 @@
 				F7632C052858666E007DAEA2 /* LaunchScreen.storyboard in Resources */,
 				F7632C022858666E007DAEA2 /* Assets.xcassets in Resources */,
 				F7632C002858666B007DAEA2 /* Main.storyboard in Resources */,
+				F70B1D8728586AB700B32918 /* MarketsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +296,7 @@
 				F7632BFB2858666B007DAEA2 /* SceneDelegate.swift in Sources */,
 				F70B1D7A2858693D00B32918 /* HomeViewController.swift in Sources */,
 				F70B1D802858697F00B32918 /* WalletViewController.swift in Sources */,
+				F70B1D8628586AB700B32918 /* MarketsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

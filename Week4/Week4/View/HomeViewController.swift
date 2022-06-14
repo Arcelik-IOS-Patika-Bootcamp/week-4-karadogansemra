@@ -12,9 +12,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var homePageControl: UIPageControl!
     @IBOutlet weak var homeCollectionView: UICollectionView!
     @IBOutlet weak var homeScrollView: UIScrollView!
-   
     @IBOutlet weak var homeScrollTitleLabel: UILabel!
-    
     @IBOutlet weak var homeScrollCashLabel: UILabel!
     
     override func viewDidLoad() {
