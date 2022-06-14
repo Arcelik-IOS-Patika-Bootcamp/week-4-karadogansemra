@@ -6,8 +6,8 @@ target 'Week4' do
   use_frameworks!
 
   # Pods for Week4
-  pod 'Alamofire'
-  pod 'Kingfisher'
+    pod 'Kingfisher'
+    pod 'Alamofire'
 
   target 'Week4Tests' do
     inherit! :search_paths

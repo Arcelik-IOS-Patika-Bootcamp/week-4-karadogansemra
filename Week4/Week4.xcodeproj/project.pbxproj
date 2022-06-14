@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,13 @@
 		F70B1D802858697F00B32918 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70B1D7F2858697F00B32918 /* WalletViewController.swift */; };
 		F70B1D8628586AB700B32918 /* MarketsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70B1D8428586AB700B32918 /* MarketsTableViewCell.swift */; };
 		F70B1D8728586AB700B32918 /* MarketsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F70B1D8528586AB700B32918 /* MarketsTableViewCell.xib */; };
+		F70B1D9A2858AC0800B32918 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70B1D992858AC0800B32918 /* Constants.swift */; };
+		F70B1D9C2858ACF900B32918 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70B1D9B2858ACF900B32918 /* Interactor.swift */; };
+		F70B1D9E2858AE2600B32918 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70B1D9D2858AE2600B32918 /* Presenter.swift */; };
+		F70B1DA02858AEE500B32918 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70B1D9F2858AEE500B32918 /* Protocols.swift */; };
+		F70B1DA22858AF2600B32918 /* CoinsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70B1DA12858AF2600B32918 /* CoinsModel.swift */; };
+		F70B1DA42858B23300B32918 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70B1DA32858B23300B32918 /* Router.swift */; };
+		F70B1DA62858BC5E00B32918 /* CoinsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70B1DA52858BC5E00B32918 /* CoinsResponse.swift */; };
 		F7632BF92858666B007DAEA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7632BF82858666B007DAEA2 /* AppDelegate.swift */; };
 		F7632BFB2858666B007DAEA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7632BFA2858666B007DAEA2 /* SceneDelegate.swift */; };
 		F7632C002858666B007DAEA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7632BFE2858666B007DAEA2 /* Main.storyboard */; };
@@ -58,6 +65,13 @@
 		F70B1D7F2858697F00B32918 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		F70B1D8428586AB700B32918 /* MarketsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsTableViewCell.swift; sourceTree = "<group>"; };
 		F70B1D8528586AB700B32918 /* MarketsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketsTableViewCell.xib; sourceTree = "<group>"; };
+		F70B1D992858AC0800B32918 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F70B1D9B2858ACF900B32918 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		F70B1D9D2858AE2600B32918 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		F70B1D9F2858AEE500B32918 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		F70B1DA12858AF2600B32918 /* CoinsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsModel.swift; sourceTree = "<group>"; };
+		F70B1DA32858B23300B32918 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		F70B1DA52858BC5E00B32918 /* CoinsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsResponse.swift; sourceTree = "<group>"; };
 		F7632BF52858666B007DAEA2 /* Week4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Week4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7632BF82858666B007DAEA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7632BFA2858666B007DAEA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,7 +135,6 @@
 				5B52460E5B76B1F3A5E09205 /* Pods-Week4Tests.debug.xcconfig */,
 				7E47F651CAA50D30959A20E0 /* Pods-Week4Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -146,6 +159,47 @@
 				F70B1D8528586AB700B32918 /* MarketsTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		F70B1D8B28588E1800B32918 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F70B1D9D2858AE2600B32918 /* Presenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F70B1D8C28588E2900B32918 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				F70B1DA32858B23300B32918 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		F70B1D8D28588E3E00B32918 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				F70B1D9B2858ACF900B32918 /* Interactor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		F70B1D8E28588E5200B32918 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				F70B1DA12858AF2600B32918 /* CoinsModel.swift */,
+				F70B1DA52858BC5E00B32918 /* CoinsResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		F70B1D8F28588E6D00B32918 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F70B1D9F2858AEE500B32918 /* Protocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		F7632BEC2858666B007DAEA2 = {
@@ -173,11 +227,17 @@
 		F7632BF72858666B007DAEA2 /* Week4 */ = {
 			isa = PBXGroup;
 			children = (
+				F70B1D8F28588E6D00B32918 /* Protocols */,
+				F70B1D8E28588E5200B32918 /* Entity */,
+				F70B1D8D28588E3E00B32918 /* Interactor */,
+				F70B1D8C28588E2900B32918 /* Router */,
+				F70B1D8B28588E1800B32918 /* Presenter */,
 				F70B1D782858692200B32918 /* View */,
 				F7632BF82858666B007DAEA2 /* AppDelegate.swift */,
 				F7632BFA2858666B007DAEA2 /* SceneDelegate.swift */,
 				F7632C012858666E007DAEA2 /* Assets.xcassets */,
 				F7632C062858666E007DAEA2 /* Info.plist */,
+				F70B1D992858AC0800B32918 /* Constants.swift */,
 			);
 			path = Week4;
 			sourceTree = "<group>";
@@ -442,10 +502,17 @@
 				F70B1D7C2858695200B32918 /* MarketsViewController.swift in Sources */,
 				F7632BF92858666B007DAEA2 /* AppDelegate.swift in Sources */,
 				F70B1D7E2858696900B32918 /* BuyAndSellViewController.swift in Sources */,
+				F70B1DA02858AEE500B32918 /* Protocols.swift in Sources */,
+				F70B1DA22858AF2600B32918 /* CoinsModel.swift in Sources */,
+				F70B1D9C2858ACF900B32918 /* Interactor.swift in Sources */,
+				F70B1D9E2858AE2600B32918 /* Presenter.swift in Sources */,
 				F7632BFB2858666B007DAEA2 /* SceneDelegate.swift in Sources */,
 				F70B1D7A2858693D00B32918 /* HomeViewController.swift in Sources */,
+				F70B1DA62858BC5E00B32918 /* CoinsResponse.swift in Sources */,
 				F70B1D802858697F00B32918 /* WalletViewController.swift in Sources */,
 				F70B1D8628586AB700B32918 /* MarketsTableViewCell.swift in Sources */,
+				F70B1D9A2858AC0800B32918 /* Constants.swift in Sources */,
+				F70B1DA42858B23300B32918 /* Router.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,26 +8,71 @@
 import UIKit
 
 class MarketsViewController: UIViewController {
+      
 
-    @IBOutlet weak var marketsTableView: UITableView!
-    @IBOutlet weak var marketsSearchBar: UISearchBar!
+    @IBOutlet private weak var marketsTableView: UITableView!
+    @IBOutlet private weak var marketsSearchBar: UISearchBar!
     
+    var presenter: ViewToPresenterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       
+        setUpTableView()
+        presenter?.updateView()
+    }
+    
+    
+    private func setUpTableView() {
+        marketsTableView.dataSource = self
+        marketsTableView.delegate = self
+        marketsTableView.tableFooterView = UIView()
+           
+        marketsTableView.register(UINib(nibName: "MarketsTableViewCell", bundle: .main), forCellReuseIdentifier: "MarketsTableViewCell")
     }
     
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+// MARK: - UITableViewDataSource
+extension MarketsViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return presenter?.getCoinListCount() ?? 0
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MarketsTableViewCell", for: indexPath) as? MarketsTableViewCell
+        let row = indexPath.row
+        let coins = presenter?.getCoins(index: row)
+        
+        guard let coinImage = coins?.coinImage, let coinName = coins?.coinName, let coinSubname = coins?.coinSubname, let coinCash = coins?.coinCash, let coinSubcash = coins?.coinSubcash else {
+            return cell ?? UITableViewCell()
+        }
+        
+       
+        cell?.setCell(coinImageView: UIImage(systemName:coinImage)!, coinNameLabel: coinName, coinSubnameLabel: coinSubname, coinCashLabel: coinCash, coinSubcashLabel: coinSubcash)
+        return cell ?? UITableViewCell()
+    }
+}
 
+// MARK: - UITableViewDelegate
+extension MarketsViewController: UITableViewDelegate {}
+
+// MARK: - PresenterToViewProtocol
+extension MarketsViewController: PresenterToViewProtocol {
+
+    func showCoins() {
+        //DispatchQueue.main.async {
+            self.marketsTableView.reloadData()
+        //}
+        
+    }
+    
+    func showError() {
+        let alert = UIAlertController(title: "Alert", message: "Problem Fetching Coins", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
