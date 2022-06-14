@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F70B1D7A2858693D00B32918 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70B1D792858693D00B32918 /* HomeViewController.swift */; };
+		F70B1D7C2858695200B32918 /* MarketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70B1D7B2858695200B32918 /* MarketsViewController.swift */; };
+		F70B1D7E2858696900B32918 /* BuyAndSellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70B1D7D2858696900B32918 /* BuyAndSellViewController.swift */; };
+		F70B1D802858697F00B32918 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70B1D7F2858697F00B32918 /* WalletViewController.swift */; };
 		F7632BF92858666B007DAEA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7632BF82858666B007DAEA2 /* AppDelegate.swift */; };
 		F7632BFB2858666B007DAEA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7632BFA2858666B007DAEA2 /* SceneDelegate.swift */; };
-		F7632BFD2858666B007DAEA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7632BFC2858666B007DAEA2 /* ViewController.swift */; };
 		F7632C002858666B007DAEA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7632BFE2858666B007DAEA2 /* Main.storyboard */; };
 		F7632C022858666E007DAEA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7632C012858666E007DAEA2 /* Assets.xcassets */; };
 		F7632C052858666E007DAEA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7632C032858666E007DAEA2 /* LaunchScreen.storyboard */; };
@@ -35,10 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F70B1D792858693D00B32918 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F70B1D7B2858695200B32918 /* MarketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsViewController.swift; sourceTree = "<group>"; };
+		F70B1D7D2858696900B32918 /* BuyAndSellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyAndSellViewController.swift; sourceTree = "<group>"; };
+		F70B1D7F2858697F00B32918 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		F7632BF52858666B007DAEA2 /* Week4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Week4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7632BF82858666B007DAEA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7632BFA2858666B007DAEA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F7632BFC2858666B007DAEA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F7632BFF2858666B007DAEA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7632C012858666E007DAEA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7632C042858666E007DAEA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +82,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F70B1D782858692200B32918 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F7632C032858666E007DAEA2 /* LaunchScreen.storyboard */,
+				F7632BFE2858666B007DAEA2 /* Main.storyboard */,
+				F70B1D792858693D00B32918 /* HomeViewController.swift */,
+				F70B1D7B2858695200B32918 /* MarketsViewController.swift */,
+				F70B1D7D2858696900B32918 /* BuyAndSellViewController.swift */,
+				F70B1D7F2858697F00B32918 /* WalletViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F7632BEC2858666B007DAEA2 = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +118,10 @@
 		F7632BF72858666B007DAEA2 /* Week4 */ = {
 			isa = PBXGroup;
 			children = (
+				F70B1D782858692200B32918 /* View */,
 				F7632BF82858666B007DAEA2 /* AppDelegate.swift */,
 				F7632BFA2858666B007DAEA2 /* SceneDelegate.swift */,
-				F7632BFC2858666B007DAEA2 /* ViewController.swift */,
-				F7632BFE2858666B007DAEA2 /* Main.storyboard */,
 				F7632C012858666E007DAEA2 /* Assets.xcassets */,
-				F7632C032858666E007DAEA2 /* LaunchScreen.storyboard */,
 				F7632C062858666E007DAEA2 /* Info.plist */,
 			);
 			path = Week4;
@@ -258,9 +275,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7632BFD2858666B007DAEA2 /* ViewController.swift in Sources */,
+				F70B1D7C2858695200B32918 /* MarketsViewController.swift in Sources */,
 				F7632BF92858666B007DAEA2 /* AppDelegate.swift in Sources */,
+				F70B1D7E2858696900B32918 /* BuyAndSellViewController.swift in Sources */,
 				F7632BFB2858666B007DAEA2 /* SceneDelegate.swift in Sources */,
+				F70B1D7A2858693D00B32918 /* HomeViewController.swift in Sources */,
+				F70B1D802858697F00B32918 /* WalletViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
