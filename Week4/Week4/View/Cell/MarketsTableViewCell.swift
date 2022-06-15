@@ -9,12 +9,12 @@ import UIKit
 import Kingfisher
 class MarketsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var coinImageView: UIImageView!
-    @IBOutlet weak var coinSubnameLabel: UILabel!
-    @IBOutlet weak var coinNameLabel: UILabel!
-    @IBOutlet weak var coinCashLabel: UILabel!
-    @IBOutlet weak var coinSubcashLabel: UILabel!
-    
+    @IBOutlet private weak var coinImageView: UIImageView!
+    @IBOutlet private weak var coinSubnameLabel: UILabel!
+    @IBOutlet private weak var coinNameLabel: UILabel!
+    @IBOutlet private weak var coinCashLabel: UILabel!
+    @IBOutlet private weak var coinSubcashLabel: UILabel!
+ 
     override func awakeFromNib() {
         super.awakeFromNib()
     }

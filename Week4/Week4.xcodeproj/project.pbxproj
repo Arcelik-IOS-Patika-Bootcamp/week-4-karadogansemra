@@ -31,6 +31,8 @@
 		F7632C102858666F007DAEA2 /* Week4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7632C0F2858666F007DAEA2 /* Week4Tests.swift */; };
 		F7632C1B2858666F007DAEA2 /* Week4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7632C1A2858666F007DAEA2 /* Week4UITests.swift */; };
 		F765F68A2859CD9800175C60 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F765F6892859CD9800175C60 /* TabBarController.swift */; };
+		F765F68F2859F46D00175C60 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F765F68D2859F46D00175C60 /* CollectionViewCell.swift */; };
+		F765F6902859F46D00175C60 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F765F68E2859F46D00175C60 /* CollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		F7632C1A2858666F007DAEA2 /* Week4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week4UITests.swift; sourceTree = "<group>"; };
 		F7632C1C2858666F007DAEA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F765F6892859CD9800175C60 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		F765F68D2859F46D00175C60 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		F765F68E2859F46D00175C60 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,8 @@
 			children = (
 				F70B1D8428586AB700B32918 /* MarketsTableViewCell.swift */,
 				F70B1D8528586AB700B32918 /* MarketsTableViewCell.xib */,
+				F765F68D2859F46D00175C60 /* CollectionViewCell.swift */,
+				F765F68E2859F46D00175C60 /* CollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -375,6 +381,7 @@
 				F7632C022858666E007DAEA2 /* Assets.xcassets in Resources */,
 				F7632C002858666B007DAEA2 /* Main.storyboard in Resources */,
 				F70B1D8728586AB700B32918 /* MarketsTableViewCell.xib in Resources */,
+				F765F6902859F46D00175C60 /* CollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +519,7 @@
 				F70B1D9E2858AE2600B32918 /* Presenter.swift in Sources */,
 				F7632BFB2858666B007DAEA2 /* SceneDelegate.swift in Sources */,
 				F70B1D7A2858693D00B32918 /* HomeViewController.swift in Sources */,
+				F765F68F2859F46D00175C60 /* CollectionViewCell.swift in Sources */,
 				F70B1DA62858BC5E00B32918 /* CoinsResponse.swift in Sources */,
 				F70B1D802858697F00B32918 /* WalletViewController.swift in Sources */,
 				F70B1D8628586AB700B32918 /* MarketsTableViewCell.swift in Sources */,
