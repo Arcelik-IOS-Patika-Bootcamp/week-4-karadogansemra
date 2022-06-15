@@ -15,16 +15,29 @@ class Interactor: PresentorToInteractorProtocol {
     
     // MARK: - Methods
     func fetchCoins() {
+     
+     
            AF.request(Constants.URL).response { response in
             if(response.response?.statusCode == 200){
                 guard let data = response.data else { return }
                 do {
-                    let decoder = JSONDecoder()
-                    let coinsResponse = try decoder.decode(CoinsResponse.self, from: data)
-                    guard let coinscurrency = coinsResponse.currency else { return }
+                    //let decoder = JSONDecoder()
+                   /* let coinsResponse = try decoder.decode(CoinsResponse.self, from: data)
+                    guard let coinscurrency = coinsResponse.JSON else { return }
                     self.coins = coinscurrency
                     
-                    self.presenter?.Fetched()
+                    self.presenter?.Fetched()*/
+                    let model = try JSONDecoder().decode([CoinsModel].self, from: data)
+                    self.coins = model
+                    
+                     
+                     
+                     DispatchQueue.main.async {
+                         self.presenter?.Fetched()
+                     }
+                                     
+                    
+                    
                 } catch let error {
                     print(error)
                 }

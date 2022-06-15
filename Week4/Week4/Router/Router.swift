@@ -12,21 +12,40 @@ class Router: PresenterToRouterProtocol{
   
         
     // MARK: - Methods
-    class func createModule() -> UIViewController {
+  
+   class func createHomeModule() -> UIViewController {
            
-       let view = MarketsViewController()
+       let view = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+    
        let presenter: ViewToPresenterProtocol & InteractorToPresenterProtocol = Presenter()
        let interactor: PresentorToInteractorProtocol = Interactor()
        let router: PresenterToRouterProtocol = Router()
        
        view.presenter = presenter
-       presenter.view = view
+       presenter.view = view as? PresenterToViewProtocol
        presenter.router = router
        presenter.interactor = interactor
        interactor.presenter = presenter
     
        return view
     }
+    
+    class func createMarketsModule() -> UIViewController {
+            
+        let view = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MarketsViewController") as! MarketsViewController
+     
+        let presenter: ViewToPresenterProtocol & InteractorToPresenterProtocol = Presenter()
+        let interactor: PresentorToInteractorProtocol = Interactor()
+        let router: PresenterToRouterProtocol = Router()
+        
+        view.presenter = presenter
+        presenter.view = view
+        presenter.router = router
+        presenter.interactor = interactor
+        interactor.presenter = presenter
+     
+        return view
+     }
     
     static var mainstoryboard: UIStoryboard {
         return UIStoryboard(name:"Main",bundle: Bundle.main)

@@ -38,6 +38,7 @@ protocol ViewToPresenterProtocol: AnyObject {
 }
 
 protocol PresenterToRouterProtocol: AnyObject {
-    static func createModule() -> UIViewController
+    static func createHomeModule() -> UIViewController
+    static func createMarketsModule() -> UIViewController
 
 }

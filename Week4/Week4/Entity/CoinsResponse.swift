@@ -8,9 +8,9 @@
 import Foundation
 
 struct CoinsResponse: Codable {
-    let status: String?
-    let source: String?
-    let sortBy: String?
-    let currency: [CoinsModel]?
+    //let status: String?
+    //let source: String?
+    //let sortBy: String?
+    let JSON: [CoinsModel]?
    
 }

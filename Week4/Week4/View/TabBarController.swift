@@ -19,9 +19,12 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
 
         if viewController is HomeViewController {
             print("First tab")
+            let vc = Router.createHomeModule()
+         
+        
         } else if viewController is MarketsViewController {
             print("Second tab")
-            Router.createModule()
+            let vc = Router.createMarketsModule()
         }
         else if viewController is BuyAndSellViewController {
            print("Third tab")
