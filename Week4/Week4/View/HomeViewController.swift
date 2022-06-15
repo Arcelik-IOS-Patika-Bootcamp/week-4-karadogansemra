@@ -6,30 +6,21 @@
 //
 
 import UIKit
-
+import Alamofire
 class HomeViewController: UIViewController {
 
-    @IBOutlet weak var homePageControl: UIPageControl!
-    @IBOutlet weak var homeCollectionView: UICollectionView!
-    @IBOutlet weak var homeScrollView: UIScrollView!
-    @IBOutlet weak var homeScrollTitleLabel: UILabel!
-    @IBOutlet weak var homeScrollCashLabel: UILabel!
+    @IBOutlet private weak var homePageControl: UIPageControl!
+    @IBOutlet private weak var homeCollectionView: UICollectionView!
+    @IBOutlet private weak var homeScrollView: UIScrollView!
+    @IBOutlet private weak var homeScrollTitleLabel: UILabel!
+    @IBOutlet private weak var homeScrollCashLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

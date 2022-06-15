@@ -16,3 +16,4 @@ struct CoinsModel: Codable {
     let coinSubcash: String?
     
 }
+

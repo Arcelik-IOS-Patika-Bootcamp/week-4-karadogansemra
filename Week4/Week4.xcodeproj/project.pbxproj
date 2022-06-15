@@ -30,6 +30,7 @@
 		F7632C052858666E007DAEA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7632C032858666E007DAEA2 /* LaunchScreen.storyboard */; };
 		F7632C102858666F007DAEA2 /* Week4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7632C0F2858666F007DAEA2 /* Week4Tests.swift */; };
 		F7632C1B2858666F007DAEA2 /* Week4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7632C1A2858666F007DAEA2 /* Week4UITests.swift */; };
+		F765F68A2859CD9800175C60 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F765F6892859CD9800175C60 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		F7632C162858666F007DAEA2 /* Week4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Week4UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7632C1A2858666F007DAEA2 /* Week4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week4UITests.swift; sourceTree = "<group>"; };
 		F7632C1C2858666F007DAEA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F765F6892859CD9800175C60 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				F70B1D7B2858695200B32918 /* MarketsViewController.swift */,
 				F70B1D7D2858696900B32918 /* BuyAndSellViewController.swift */,
 				F70B1D7F2858697F00B32918 /* WalletViewController.swift */,
+				F765F6892859CD9800175C60 /* TabBarController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 				F70B1D7C2858695200B32918 /* MarketsViewController.swift in Sources */,
 				F7632BF92858666B007DAEA2 /* AppDelegate.swift in Sources */,
 				F70B1D7E2858696900B32918 /* BuyAndSellViewController.swift in Sources */,
+				F765F68A2859CD9800175C60 /* TabBarController.swift in Sources */,
 				F70B1DA02858AEE500B32918 /* Protocols.swift in Sources */,
 				F70B1DA22858AF2600B32918 /* CoinsModel.swift in Sources */,
 				F70B1D9C2858ACF900B32918 /* Interactor.swift in Sources */,

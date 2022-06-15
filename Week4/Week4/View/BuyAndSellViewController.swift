@@ -6,7 +6,6 @@
 //
 
 import UIKit
-
 class BuyAndSellViewController: UIViewController {
 
     override func viewDidLoad() {

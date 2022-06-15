@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import UIKit
 
 class Presenter: ViewToPresenterProtocol {
+  
  
     // MARK: - Properties
     weak var view: PresenterToViewProtocol?
@@ -26,7 +28,10 @@ class Presenter: ViewToPresenterProtocol {
     func getCoins(index: Int) -> CoinsModel? {
         return interactor?.coins?[index]
     }
-   
+    
+
+    
+    
 }
 
 // MARK: - InteractorToPresenterProtocol

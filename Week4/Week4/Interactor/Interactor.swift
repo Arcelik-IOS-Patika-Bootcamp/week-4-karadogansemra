@@ -7,10 +7,9 @@
 
 import Foundation
 import Alamofire
-
 class Interactor: PresentorToInteractorProtocol {
     var coins: [CoinsModel]?
-
+   
     // MARK: - Properties
     weak var presenter: InteractorToPresenterProtocol?
     
@@ -24,6 +23,7 @@ class Interactor: PresentorToInteractorProtocol {
                     let coinsResponse = try decoder.decode(CoinsResponse.self, from: data)
                     guard let coinscurrency = coinsResponse.currency else { return }
                     self.coins = coinscurrency
+                    
                     self.presenter?.Fetched()
                 } catch let error {
                     print(error)
@@ -34,4 +34,7 @@ class Interactor: PresentorToInteractorProtocol {
             }
         }
     }
+    
+   
+    
 }

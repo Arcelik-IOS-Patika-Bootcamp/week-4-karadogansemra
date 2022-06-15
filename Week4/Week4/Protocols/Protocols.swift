@@ -23,6 +23,7 @@ protocol PresentorToInteractorProtocol: AnyObject {
     var coins: [CoinsModel]? { get }
     
     func fetchCoins()
+   
 }
 
 protocol ViewToPresenterProtocol: AnyObject {
@@ -33,8 +34,10 @@ protocol ViewToPresenterProtocol: AnyObject {
     func updateView()
     func getCoinListCount() -> Int?
     func getCoins(index: Int) -> CoinsModel?
+    
 }
 
 protocol PresenterToRouterProtocol: AnyObject {
     static func createModule() -> UIViewController
+
 }

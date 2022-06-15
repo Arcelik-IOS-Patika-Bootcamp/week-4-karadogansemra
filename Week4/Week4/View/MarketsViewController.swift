@@ -18,7 +18,6 @@ class MarketsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
         setUpTableView()
         presenter?.updateView()
     }
@@ -40,6 +39,7 @@ extension MarketsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter?.getCoinListCount() ?? 0
+        //return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -52,7 +52,9 @@ extension MarketsViewController: UITableViewDataSource {
         }
         
        
-        cell?.setCell(coinImageView: UIImage(systemName:coinImage)!, coinNameLabel: coinName, coinSubnameLabel: coinSubname, coinCashLabel: coinCash, coinSubcashLabel: coinSubcash)
+        cell?.setCell(coinImageView: coinImage, coinNameLabel: coinName, coinSubnameLabel: coinSubname, coinCashLabel: coinCash, coinSubcashLabel: coinSubcash)
+        
+        /*cell?.setCell(coinImageView: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png", coinNameLabel: "Bitcoin", coinSubnameLabel: "USDT", coinCashLabel: "324223.234 TL", coinSubcashLabel: "34,98")*/
         return cell ?? UITableViewCell()
     }
 }
@@ -76,3 +78,5 @@ extension MarketsViewController: PresenterToViewProtocol {
         self.present(alert, animated: true, completion: nil)
     }
 }
+
+

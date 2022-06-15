@@ -11,14 +11,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MarketsTableViewCell" id="KGk-i7-Jjw" customClass="MarketsTableViewCell" customModule="Week4" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="81" translatesAutoresizingMaskIntoConstraints="NO" id="IMD-Z9-SHC">
-                        <rect key="frame" x="3" y="0.0" width="317" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitcoinsign.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NAr-uI-taR">
                                 <rect key="frame" x="0.0" y="5.5" width="40" height="39"/>
@@ -28,24 +28,27 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cDY-Gn-o3v">
-                                <rect key="frame" x="121" y="12" width="42.5" height="26"/>
+                                <rect key="frame" x="121" y="12" width="75.5" height="26"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdA-fp-O1C">
-                                        <rect key="frame" x="0.5" y="0.0" width="42" height="16"/>
+                                        <rect key="frame" x="16.5" y="0.0" width="42.5" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" red="0.11763454230000001" green="0.1176540628" blue="0.1176278964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32M USDT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlW-ia-kNN">
-                                        <rect key="frame" x="0.0" y="16" width="42.5" height="10"/>
+                                        <rect key="frame" x="16.5" y="16" width="42.5" height="10"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                         <color key="textColor" systemColor="systemGray2Color"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="bdA-fp-O1C" firstAttribute="trailing" secondItem="dlW-ia-kNN" secondAttribute="trailing" id="VxO-Gr-n2F"/>
+                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="G7E-5w-PE0">
-                                <rect key="frame" x="244.5" y="14" width="72.5" height="22"/>
+                                <rect key="frame" x="277.5" y="14" width="72.5" height="22"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="399,6767.67TL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqk-Eg-M7e">
                                         <rect key="frame" x="0.0" y="0.0" width="72.5" height="12"/>
@@ -60,6 +63,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="Lqk-Eg-M7e" firstAttribute="leading" secondItem="G7E-5w-PE0" secondAttribute="leadingMargin" id="VLd-Mu-HZH"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <constraints>
@@ -72,6 +78,7 @@
                     <constraint firstAttribute="bottom" secondItem="IMD-Z9-SHC" secondAttribute="bottom" id="0zI-yf-Eqs"/>
                     <constraint firstAttribute="trailing" secondItem="IMD-Z9-SHC" secondAttribute="trailing" id="MId-5R-owp"/>
                     <constraint firstItem="IMD-Z9-SHC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="nyG-J6-DcF"/>
+                    <constraint firstItem="IMD-Z9-SHC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="xyo-55-pNg"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -82,7 +89,7 @@
                 <outlet property="coinSubcashLabel" destination="J4k-SE-TYw" id="utK-Ka-Nqd"/>
                 <outlet property="coinSubnameLabel" destination="dlW-ia-kNN" id="B8m-lo-rrj"/>
             </connections>
-            <point key="canvasLocation" x="95.652173913043484" y="103.79464285714285"/>
+            <point key="canvasLocation" x="-321.73913043478262" y="102.45535714285714"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -12,4 +12,5 @@ struct CoinsResponse: Codable {
     let source: String?
     let sortBy: String?
     let currency: [CoinsModel]?
+   
 }

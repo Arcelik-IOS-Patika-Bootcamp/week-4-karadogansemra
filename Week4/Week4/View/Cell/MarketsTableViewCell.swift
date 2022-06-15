@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Kingfisher
 class MarketsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var coinImageView: UIImageView!
@@ -20,9 +20,12 @@ class MarketsTableViewCell: UITableViewCell {
     }
 
     // MARK:- Methods
-   func setCell(coinImageView: UIImage, coinNameLabel: String, coinSubnameLabel: String,  coinCashLabel: String, coinSubcashLabel: String) {
+   func setCell(coinImageView: String, coinNameLabel: String, coinSubnameLabel: String,  coinCashLabel: String, coinSubcashLabel: String) {
   
-    self.coinImageView.image = coinImageView
+    let urlImage = URL(string: coinImageView)
+    self.coinImageView.kf.setImage(with: urlImage)
+    
+   // self.coinImageView.image = coinImageView
     self.coinNameLabel.text = coinNameLabel
     self.coinSubnameLabel.text = coinSubnameLabel
     self.coinCashLabel.text = coinCashLabel
