@@ -22,7 +22,7 @@ class HomeViewController: UIViewController {
         
         setUpCollectionView()
         presenter?.updateView()
-        self.homeCollectionView.reloadData()
+        
         
     }
     
@@ -51,12 +51,12 @@ extension HomeViewController: UICollectionViewDataSource{
         let row = indexPath.row
         let coins = presenter?.getCoins(index: row)
         
-       /* guard let coinImage = coins?.image, let coinName = coins?.name, let coinCash = coins?.current_price else {
+        guard let coinImage = coins?.image, let coinName = coins?.name, let coinCash = coins?.currentPrice else {
             return cell ?? UICollectionViewCell()
         }
         
        
-        cell?.setCell(coinImageView: coinImage, coinNameLabel: coinName, coinCashLabel: coinCash)*/
+        cell?.setCell(coinImageView: coinImage, coinNameLabel: coinName, coinCashLabel: String(coinCash))
         
            
         /*cell?.setCell(coinImageView: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png", coinNameLabel: "Bitcoin",  coinCashLabel: "324223.234 TL")*/

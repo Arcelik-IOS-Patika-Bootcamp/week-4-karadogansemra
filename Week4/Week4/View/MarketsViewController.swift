@@ -46,12 +46,12 @@ extension MarketsViewController: UITableViewDataSource {
         let row = indexPath.row
         let coins = presenter?.getCoins(index: row)
         
-       /* guard let coinImage = coins?.image, let coinName = coins?.name, let coinSubname = coins?.symbol, let coinCash = coins?.current_price, let coinSubcash = coins?.id else {
+        guard let coinImage = coins?.image, let coinName = coins?.name, let coinSubname = coins?.symbol, let coinCash = coins?.currentPrice, let coinSubcash = coins?.id else {
             return cell ?? UITableViewCell()
         }
         
        
-        cell?.setCell(coinImageView: coinImage, coinNameLabel: coinName, coinSubnameLabel: coinSubname, coinCashLabel: coinCash, coinSubcashLabel: coinSubcash)*/
+        cell?.setCell(coinImageView: coinImage, coinNameLabel: coinName, coinSubnameLabel: coinSubname, coinCashLabel: String(coinCash), coinSubcashLabel: coinSubcash)
         
         /*cell?.setCell(coinImageView: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png", coinNameLabel: "Bitcoin", coinSubnameLabel: "USDT", coinCashLabel: "324223.234 TL", coinSubcashLabel: "34,98")*/
         return cell ?? UITableViewCell()

@@ -13,18 +13,19 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
         super.viewDidLoad()
 
         self.delegate = self
+       
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
 
         if viewController is HomeViewController {
             print("First tab")
-            let vc = Router.createHomeModule()
+            Router.createHomeModule()
          
         
         } else if viewController is MarketsViewController {
             print("Second tab")
-            let vc = Router.createMarketsModule()
+            Router.createMarketsModule()
         }
         else if viewController is BuyAndSellViewController {
            print("Third tab")

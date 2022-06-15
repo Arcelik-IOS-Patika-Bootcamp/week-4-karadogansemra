@@ -7,13 +7,13 @@
 
 import Foundation
 
-/*struct CoinsModel: Codable {
+struct CoinsModel: Codable {
     
     var id : String
     var symbol : String
     var name : String
     var image : String
-    var currentPrice : String
+    var currentPrice : Double
     
     enum CodingKeys: String, CodingKey {
         
@@ -26,8 +26,8 @@ import Foundation
 
     }
     
-}*/
-struct CoinsModel: Codable {
+}
+/*struct CoinsModel: Codable {
     var name: String
     var image: String
     var currentPrice: Double
@@ -46,4 +46,4 @@ struct CoinsModel: Codable {
         case totalVolume = "total_volume"
 
     }
-}
+}*/
