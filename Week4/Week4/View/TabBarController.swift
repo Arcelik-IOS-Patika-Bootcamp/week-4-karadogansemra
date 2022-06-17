@@ -8,11 +8,18 @@
 import UIKit
 
 class TabBarController: UITabBarController, UITabBarControllerDelegate{
-
+    
+    var presenter: ViewToPresenterProtocol?
+    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.delegate = self
+//        let first = HomeViewController()
+//        let second = MarketsViewController()
+//
+//        self.viewControllers = [first, second]
        
     }
     
@@ -20,12 +27,14 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
 
         if viewController is HomeViewController {
             print("First tab")
-            Router.createHomeModule()
-         
+            presenter?.updateView()
+//            let vc = Router.createHomeModule()
+//            self.show(vc as UIViewController, sender: vc)
         
         } else if viewController is MarketsViewController {
             print("Second tab")
-            Router.createMarketsModule()
+//            let vc = Router.createMarketsModule()
+//            self.show(vc as UIViewController, sender: vc)
         }
         else if viewController is BuyAndSellViewController {
            print("Third tab")

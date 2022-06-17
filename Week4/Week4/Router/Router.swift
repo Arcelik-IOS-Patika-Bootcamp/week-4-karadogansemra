@@ -13,9 +13,9 @@ class Router: PresenterToRouterProtocol{
         
     // MARK: - Methods
   
-   class func createHomeModule() -> UIViewController {
+   class func createModule() -> TabBarController {
            
-       let view = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+       let view = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
     
        let presenter: ViewToPresenterProtocol & InteractorToPresenterProtocol = Presenter()
        let interactor: PresentorToInteractorProtocol = Interactor()
@@ -30,7 +30,25 @@ class Router: PresenterToRouterProtocol{
        return view
     }
     
-    class func createMarketsModule() -> UIViewController {
+    class func createHomeModule() -> HomeViewController {
+            
+        let view = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+     
+        let presenter: ViewToPresenterProtocol & InteractorToPresenterProtocol = Presenter()
+        let interactor: PresentorToInteractorProtocol = Interactor()
+        let router: PresenterToRouterProtocol = Router()
+        
+        view.presenter = presenter
+        presenter.view = view as? PresenterToViewProtocol
+        presenter.router = router
+        presenter.interactor = interactor
+        interactor.presenter = presenter
+     
+        return view
+     }
+    
+    
+    class func createMarketsModule() -> MarketsViewController {
             
         let view = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MarketsViewController") as! MarketsViewController
      
@@ -39,7 +57,7 @@ class Router: PresenterToRouterProtocol{
         let router: PresenterToRouterProtocol = Router()
         
         view.presenter = presenter
-        presenter.view = view
+        presenter.view = view as? PresenterToViewProtocol
         presenter.router = router
         presenter.interactor = interactor
         interactor.presenter = presenter
@@ -47,6 +65,7 @@ class Router: PresenterToRouterProtocol{
         return view
      }
     
+        
     static var mainstoryboard: UIStoryboard {
         return UIStoryboard(name:"Main",bundle: Bundle.main)
     }

@@ -21,9 +21,8 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         setUpCollectionView()
-        presenter?.updateView()
         
-        
+       
     }
     
     private func setUpCollectionView() {

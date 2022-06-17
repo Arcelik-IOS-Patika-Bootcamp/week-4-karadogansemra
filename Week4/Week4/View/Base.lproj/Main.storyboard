@@ -12,20 +12,20 @@
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="Week4" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeViewController" customModule="Week4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="HomeViewController" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="8vZ-Gk-l6h">
-                                <rect key="frame" x="3.5" y="297.5" width="407" height="27.5"/>
+                                <rect key="frame" x="-18.5" y="240.5" width="451" height="30.5"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8vZ-Gk-l6h" secondAttribute="height" multiplier="207:14" id="XWU-JE-nSR"/>
                                 </constraints>
                             </pageControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rqm-F3-L4q">
-                                <rect key="frame" x="3.5" y="325" width="407" height="488"/>
+                                <rect key="frame" x="-18.5" y="271" width="451" height="542"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rqm-F3-L4q" secondAttribute="height" multiplier="414:497" id="UMs-3h-mPb"/>
@@ -46,12 +46,16 @@
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="8bC-Xf-vdC" id="77J-rG-3jy"/>
+                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="ZfC-Ih-tul"/>
+                                </connections>
                             </collectionView>
                             <scrollView verifyAmbiguity="off" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d4d-iI-cyN">
-                                <rect key="frame" x="3.5" y="101" width="407" height="196.5"/>
+                                <rect key="frame" x="-18.5" y="44" width="451" height="196.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available Balance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XmT-ow-DsK">
-                                        <rect key="frame" x="144" y="83" width="119" height="18"/>
+                                        <rect key="frame" x="166" y="83" width="119" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="18" id="j4E-94-0Zu"/>
                                         </constraints>
@@ -60,7 +64,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4,262.0 TL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAl-Ct-nTZ">
-                                        <rect key="frame" x="107" y="109" width="193" height="45.5"/>
+                                        <rect key="frame" x="129" y="109" width="193" height="45.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -71,8 +75,8 @@
                                     <constraint firstItem="XmT-ow-DsK" firstAttribute="top" secondItem="Q6l-8P-1rD" secondAttribute="top" constant="83" id="5u6-ZK-PxB"/>
                                     <constraint firstItem="Q6l-8P-1rD" firstAttribute="bottom" secondItem="LAl-Ct-nTZ" secondAttribute="bottom" constant="42" id="ehz-sV-RK7"/>
                                     <constraint firstItem="XmT-ow-DsK" firstAttribute="centerX" secondItem="d4d-iI-cyN" secondAttribute="centerX" id="iaa-fI-Zv4"/>
-                                    <constraint firstAttribute="bottom" secondItem="LAl-Ct-nTZ" secondAttribute="bottom" constant="42" id="jgH-TK-JUW"/>
-                                    <constraint firstAttribute="trailing" secondItem="LAl-Ct-nTZ" secondAttribute="trailing" constant="110.5" id="nCn-KI-T2A"/>
+                                    <constraint firstAttribute="bottom" secondItem="LAl-Ct-nTZ" secondAttribute="bottom" constant="143.5" id="jgH-TK-JUW"/>
+                                    <constraint firstAttribute="trailing" secondItem="LAl-Ct-nTZ" secondAttribute="trailing" constant="107" id="nCn-KI-T2A"/>
                                     <constraint firstItem="XmT-ow-DsK" firstAttribute="centerX" secondItem="LAl-Ct-nTZ" secondAttribute="centerX" id="vwv-6Z-VyO"/>
                                     <constraint firstItem="LAl-Ct-nTZ" firstAttribute="top" secondItem="XmT-ow-DsK" secondAttribute="bottom" constant="8" id="wkz-We-rmO"/>
                                 </constraints>
@@ -85,6 +89,7 @@
                             <constraint firstItem="8vZ-Gk-l6h" firstAttribute="leading" secondItem="rqm-F3-L4q" secondAttribute="leading" id="7Iw-ON-sDO"/>
                             <constraint firstItem="8vZ-Gk-l6h" firstAttribute="top" secondItem="d4d-iI-cyN" secondAttribute="bottom" id="E6n-rt-cGd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rqm-F3-L4q" secondAttribute="bottom" id="Ewp-2I-qCa"/>
+                            <constraint firstItem="d4d-iI-cyN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Kse-Xk-HRD"/>
                             <constraint firstItem="d4d-iI-cyN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OOC-pG-bg4"/>
                             <constraint firstItem="8vZ-Gk-l6h" firstAttribute="trailing" secondItem="rqm-F3-L4q" secondAttribute="trailing" id="TPe-sp-aU6"/>
                             <constraint firstItem="d4d-iI-cyN" firstAttribute="trailing" secondItem="8vZ-Gk-l6h" secondAttribute="trailing" id="Yvz-Vd-GaF"/>
@@ -103,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-755" y="813"/>
+            <point key="canvasLocation" x="-755.07246376811599" y="812.94642857142856"/>
         </scene>
         <!--Markets-->
         <scene sceneID="OIF-cM-D1H">
@@ -186,7 +191,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="pWO-Mh-HUS">
             <objects>
-                <tabBarController storyboardIdentifier="tabBar" automaticallyAdjustsScrollViewInsets="NO" id="epf-jJ-W7u" customClass="TabBarController" customModule="Week4" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="epf-jJ-W7u" customClass="TabBarController" customModule="Week4" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" restorationIdentifier="tabBar" insetsLayoutMarginsFromSafeArea="NO" id="nk1-4A-x9a">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

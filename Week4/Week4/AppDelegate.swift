@@ -13,15 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var storyboard: UIStoryboard?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        /*self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = Router.createHomeModule()
-        self.window?.makeKeyAndVisible()*/
-      //  Router.createHomeModule()
-        
-        let tabbarController = self.storyboard?.instantiateViewController(withIdentifier: "tabBar") as? UITabBarController
-
-        self.window?.rootViewController = tabbarController
-        self.window?.makeKeyAndVisible()
         return true
     }
 
